@@ -1,9 +1,7 @@
-const getUserService = () => {
-    return {
-        name: 'vivian',
-        lastName: 'marino',
-        code: '1221'
-    }
+const getUser = require('../repositories/userRepository')
+const getUserService = async () => {
+    const users = await getUser();
+    return users;
 };
 
 module.exports = getUserService;
